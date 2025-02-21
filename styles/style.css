@@ -13,7 +13,7 @@ html {
   justify-content: center;
   align-items: center;
   width: 100%;
-  inline-size: 1200px;
+  inline-size: 1140px;
   block-size: 100%;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -118,15 +118,15 @@ html {
 }
 
 .search-form__pseudo-checkbox::after {
+  display: block;
+  position: relative;
+  margin-top: 1px;
+  margin-left: 1px;
   opacity: 0;
   content: '';
-  position: absolute;
   background: #fff;
   width: 15px;
   height: 15px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .search-form__label {
@@ -206,7 +206,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px; 
+  gap: 30px;
 }
 
 .content__card-link_current {
