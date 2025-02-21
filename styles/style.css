@@ -25,7 +25,7 @@ html {
   display: grid;
   grid-template-columns: 711px 399px;
   grid-template-rows: 534px;
-  align-items: flex-start;
+  justify-content: center;
   gap: 30px;
 }
 
