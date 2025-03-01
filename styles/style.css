@@ -52,10 +52,10 @@ ol {
 .search-form {
   display: flex;
   align-items: flex-end;
-  max-height: 54px;
+  min-height: 54px;
   min-width: 711px;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .title {
@@ -171,10 +171,13 @@ ol {
 }
 
 .search-form__label:hover {
+  cursor: pointer;
+}
+
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-decoration-style: solid;
-  text-decoration-thickness: Auto;
-  cursor: pointer;
+  text-decoration-thickness: auto;
 }
 
 .search-form__checkbox-list {
@@ -186,7 +189,6 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: flex-start;
-  width: 393px;
 }
 
 .content__video-card-title {
@@ -194,7 +196,7 @@ ol {
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
-  line-height: 100%;
+  line-height: 32px;
   text-transform: uppercase;
   color: #FFFFFF;
   max-width: 196px;
@@ -202,9 +204,11 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  padding: 0px 0px 0px 2px;
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
 }
 
@@ -216,14 +220,18 @@ ol {
   font-size: 18px;
   line-height: 16px;
   color: #FFFFFF;
-  overflow-y: auto;
+  overflow: hidden;
+  max-height: 21px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 4px 0px 0px 2px;
 }
 
 .content__list-container {
   position: relative;
-  max-height: 298px;
+  height: 298px;
   overflow-y: auto;
-  margin-top: 26px;
+  margin-top: 24px;
 }
 
 .content__list {
@@ -232,33 +240,38 @@ ol {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin-bottom: 30px;
 }
 
-.content__video-card:hover {
+.content__list-item {
+  width: 100%;
+  padding: 0 3px;
+}
+
+.content__card-link:hover {
   text-decoration: underline;
   text-decoration-style: solid;
   text-decoration-thickness: Auto;
   text-decoration-color: #FFFFFF;
 }
 
-.content__video-card:focus {
+.content__card-link_current:hover {
+  text-decoration: none;
+}
+
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
 .content__card-link_current > .content__video-card {
   background-color: #545050;
-  text-decoration: none;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #FFFFFFB2;
-  padding-left: 3px;
-  padding-right: 3px;
 }
 
 .button {
@@ -289,12 +302,13 @@ ol {
   display: flex;
   align-items: center;
   width: 100%;
+  margin-top: 30px;
 }
 
 .button:hover {
   text-decoration: underline;
   text-decoration-style: solid;
-  text-decoration-thickness: Auto;
+  text-decoration-thickness: auto;
 }
 
 .button:active {
@@ -302,7 +316,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #FFFFFFB2;
+  outline: 1px solid #FFFFFF;
 }
 
 .button:focus {
